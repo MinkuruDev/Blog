@@ -18,10 +18,13 @@ app.engine('hbs', handlebars({
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 
-app.get('/', (req, res) => {
-  res.render('home');
-})
+app.get('/', (req, res) => res.render('home'));
+app.get('/infor', (req, res) => res.render('infor'));
+app.get('/search', (req, res) => {
+  res.render('search');
+  // console.log(req.query);
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Listening at http://localhost:${port}`)
 })
