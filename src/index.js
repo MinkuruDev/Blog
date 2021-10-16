@@ -5,8 +5,13 @@ const port = 6969;
 const handlebars  = require('express-handlebars');
 const morgan = require('morgan');
 
+// server log
 app.use(morgan('combined'))
 
+// static path
+app.use(express.static(path.join(__dirname, 'public')))
+
+// using express handlebars
 app.engine('hbs', handlebars({
   extname: '.hbs'
 }));
