@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --inspect ./src/index.js",
-    "watch": "node-sass --watch src/resources/scss/app.scss src/public/css/app.css"
+    "watch": "node-sass --watch src/resources/scss/app.scss src/public/css/app.css",
+    "format": "prettier --trailing-comma all --tab-width 4 --write src/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,10 @@
     "sha256": "^0.2.0"
   },
   "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.4",
     "morgan": "^1.10.0",
-    "node-sass": "^6.0.1"
+    "node-sass": "^6.0.1",
+    "prettier": "^2.4.1"
   }
 }

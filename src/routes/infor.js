@@ -1,9 +1,9 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-console.log(router);
-const inforController = require('../resources/controllers/InforController');
+const inforController = require("../app/controllers/InforController");
 
-router.use('/', inforController.handler);
+router.get("/something", inforController.something);
+router.get("/", inforController.handler);
 
 module.exports = router;
